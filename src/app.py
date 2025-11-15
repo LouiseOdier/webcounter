@@ -21,5 +21,6 @@ def set_nul():
 @app.route("/set_value", methods=["POST"])
 def set_value():
     value = request.form["value"]
+    print(value)
     cnt.set_value(value)
     return redirect("/")
